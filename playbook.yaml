@@ -1,0 +1,13 @@
+---
+- name: Ansible Testing
+  hosts: all
+  tasks:
+    - name: Run tests for windows
+      ansible.builtin.import_role:
+        name: windows
+      when: inventory_hostname in groups["windows"]
+
+    - name: Run tests for linux
+      ansible.builtin.import_role:
+        name: linux
+      when: inventory_hostname in groups["linux"]

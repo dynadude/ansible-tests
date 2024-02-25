@@ -1,0 +1,6 @@
+all:
+  groups:
+    linux:
+      centos7-machine
+    windows:
+      original-host

@@ -1,0 +1,5 @@
+---
+- name: Test parted
+  community.general.parted:
+    device: /dev/sda
+    state: info
