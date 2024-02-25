@@ -1,6 +1,10 @@
 all:
-  groups:
+  vars:
+    ansible_user: devops
+  children:
     linux:
-      centos7-machine
+      hosts:
+        centos7-machine
     windows:
-      original-host
+      hosts:
+        original-host
